@@ -1,0 +1,10 @@
+node_modules/
+**/node_modules/
+.env
+**/.env
+.local_db/
+**/.local_db/
+client/dist/
+dist/
+.system_generated/
+*.log

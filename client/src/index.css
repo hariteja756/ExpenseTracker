@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Oswald', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* Apple-style Transition Curves */
+.apple-transition {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Apple Slide Up Animation */
+@keyframes appleSlideUp {
+  0% {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-apple-slide {
+  animation: appleSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Apple Modal Spring Animation */
+@keyframes appleModal {
+  0% {
+    transform: scale(0.96) translateY(8px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-apple-modal {
+  animation: appleModal 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Apple Backdrop Fade */
+@keyframes appleFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-apple-fade {
+  animation: appleFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Apple Hover Grow Effect */
+.hover-apple-grow {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-apple-grow:hover {
+  transform: translateY(-2px) scale(1.01);
+  border-color: #444444;
+  box-shadow: 0 12px 30px -10px rgba(255, 255, 255, 0.05);
+}
+
+/* Brand Button Styles (Nike/Puma style) */
+.btn-brand-primary {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid #ffffff;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-brand-primary:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: scale(1.02);
+}
+
+.btn-brand-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-brand-secondary {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid #333333;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-brand-secondary:hover {
+  border-color: #ffffff;
+  transform: scale(1.02);
+}
+
+.btn-brand-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Brand Card Styles */
+.brand-card {
+  background-color: #111111;
+  border: 1px solid #222222;
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-card:hover {
+  border-color: #444444;
+}
+
+/* Brand Input Styles */
+.brand-input {
+  background-color: #111111;
+  border: 1px solid #222222;
+  color: #ffffff;
+  font-size: 0.875rem;
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+  outline: none;
+}
